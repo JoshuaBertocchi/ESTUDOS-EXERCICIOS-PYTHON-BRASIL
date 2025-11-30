@@ -1,3 +1,4 @@
+3
 # %%
 # Faça um programa que mostre a mensagem "Alo mundo" na tela:
 
@@ -47,3 +48,16 @@ raio_circulo = float(input('Infomre o raio do circulo:'))
 calculo_area_circulo = pi * raio_circulo**2
 print(f"Calucolo da Área:{calculo_area_circulo:.2f} cm")
 # %%
+# Faça um programa que calcule a área de um quadrado, em seguida mostre o dobro desta área para o usuário.
+
+def formatar_valores(valor):
+    if valor == int(valor):
+        return f"{int(valor)}"
+    else:
+        return f"{valor:.2f}"
+
+metro_quadrado = float(input("Informe o valor do metro quadrado: "))
+calculo_area = metro_quadrado**2
+dobro = calculo_area *2
+print(f"Valor informado: {formatar_valores(metro_quadrado)}m²\n Área do quadrado: {formatar_valores(calculo_area)} cm²\n Dobro do resultado: {formatar_valores(dobro)} cm²")
+# %%    
