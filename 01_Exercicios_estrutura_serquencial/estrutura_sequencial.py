@@ -61,3 +61,38 @@ calculo_area = metro_quadrado**2
 dobro = calculo_area *2
 print(f"Valor informado: {formatar_valores(metro_quadrado)}m²\n Área do quadrado: {formatar_valores(calculo_area)} cm²\n Dobro do resultado: {formatar_valores(dobro)} cm²")
 # %%    
+#Faça um programa que pergunte quanto você ganha por hora e o número de horas trabalhadas no mês. Calcule e mostre o total do seu salário no referido mês.
+
+valor_por_hora = float(input("Calculadora salarial!\nValor por hora: "))
+horas_mes = float(input("Informe suas horas trabalhadas no mês atual: "))
+
+calculo_total_pagamento = valor_por_hora * horas_mes
+
+print(f"Pagamento final: R$ {calculo_total_pagamento:.2f}")
+# %%
+def conversao_fahrenheit_para_celsius(valor):
+    try:
+        if isinstance(valor,(int,float)):
+            valor_convertido = 5*((valor-32)/9)
+            return valor_convertido
+        else:
+            print("Apenas números!")
+    except (ValueError,TypeError):
+        print(f"Digite apenas números inteiros ou Float!")
+temperatura_em_f = float(input("Temperatura em Fahrenheit: "))
+print(f"{conversao_fahrenheit_para_celsius(temperatura_em_f):.2f} f°")
+# %%
+# Faça um programa que peça 2 números inteiros e um número real. Calcule e mostre:
+def conversao_celsius_para_fahrenheit(valor):
+    try:
+        if isinstance(valor,(int,float)):
+            valor_convertido = (valor * (9/5)) + 32
+            return valor_convertido
+        else:
+            print("Apenas números!")
+    except (ValueError,TypeError):
+        print(f"Digite apenas números inteiros ou Float!")
+
+temperatura_em_c = float(input("Temperatura em C°: "))
+print(f"{conversao_celsius_para_fahrenheit(temperatura_em_c):.2f} f°")
+# %%
